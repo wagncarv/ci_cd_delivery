@@ -1,0 +1,90 @@
+GET http://localhost:4000/api/users/6035f8d9-1d34-4776-b151-32b7eb4dab43
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJyb2NrZWxpdmVyeSIsImV4cCI6MTY0MDM4NzMyMywiaWF0IjoxNjM3OTY4MTIzLCJpc3MiOiJyb2NrZWxpdmVyeSIsImp0aSI6ImMyMmIyYTQ1LTdlNmYtNGQ5YS1hN2Y5LTNlYTdhNzJlNGFlYSIsIm5iZiI6MTYzNzk2ODEyMiwic3ViIjoiZWNkOTEwZTEtZjVhNS00ZDJjLTgzYjYtZjM4ZGRlNzA1YzYxIiwidHlwIjoiYWNjZXNzIn0.3jhEQQq90GnPt2Qj71XYAD4jHOhixJ8j9f5rjXmmmmPOLcFRptwRc-uePPAFrp8hYAQ-pEhC5Ishuj0nJQNG2A
+
+###
+
+GET http://localhost:4000/api/users
+
+###
+
+DELETE http://localhost:4000/api/users/899792f0-c003-45ac-89ae-f463f079f534
+
+###
+
+POST http://localhost:4000/api/users
+content-type: application/json
+
+{
+    "name": "Wagner",
+    "cpf": "12312312320",
+    "age": 15,
+    "email": "singaz@mail.com",
+    "address": "Rua 25 abril",
+    "password": "123456",
+    "cep": "29176195"
+
+}
+
+### "46f7151c-3ce7-4aa6-a8b8-b5dcaf56ba0b"
+POST http://localhost:4000/api/users/signin
+content-type: application/json
+
+{
+    "id": "46f7151c-3ce7-4aa6-a8b8-b5dcaf56ba0b",
+    "password": "1234567"
+}
+
+###
+PUT http://localhost:4000/api/users/899792f0-c003-45ac-89ae-f463f079f534
+content-type: application/json
+
+{
+    "name": "Wagner",
+    "cpf": "1234567892",
+    "age": 20,
+    "email": "mailmailtc@mail.com",
+    "address": "Rua 25 abril",
+    "password": "123456",
+    "cep": "29000000"
+
+}
+
+###
+
+POST http://localhost:4000/api/items
+content-type: application/json
+
+{
+    "category": "prato",
+    "price": "5.00",
+    "description": "cerveja artesanal",
+    "photo": "/priv/photos/cerveja.jpg"
+}
+
+###
+POST http://localhost:4000/api/orders
+content-type: application/json
+
+{
+    "user_id": "77617308-777f-4ddd-8de7-876c01fbbb94",
+    "items": [
+        {
+            "id": "c63b96ae-5ea8-4296-8e5e-8f522fa2f9d0",
+            "quantity": 2
+        },
+          {
+            "id": "ff3e3718-fdbc-49d5-a7fb-6c0607052c87",
+            "quantity": 3
+        },
+          {
+            "id": "9074332b-50b7-4fcf-a23e-2410e4bf6602",
+            "quantity": 1
+        }
+    ],
+
+    "address": "Rua San Pietro",
+    "comments": "Quero que chegue logo",
+    "payment_method": "credit_card"
+   
+}
