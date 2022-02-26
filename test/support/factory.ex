@@ -1,7 +1,7 @@
 defmodule Rockelivery.Factory do
   use ExMachina
 
-  def user_params_factory() do
+  def user_params_factory do
     %{
       age: 19,
       address: "Rua Elixir",
